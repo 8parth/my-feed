@@ -1,0 +1,18 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<h1>
+<%= @new_feed.title %>
+</h1>
+<%= link_to @new_feed.url, 'Click to see arrow feed' %>
+
+
+<p> Here are the entries</p>
+
+<% @entries.each do |entry| %>
+	Episode name: 
+	<%=entry.title%>
+	<br>
+	Episode link:
+	<%= link_to entry.url, entry.url %> 
+	<br>
+<% end %>
