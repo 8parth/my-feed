@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     url = "http://showrss.info/feeds/505.rss"
     #url2 = "http://showrss.info/feeds/928.rss"
     feed =  Feedjira::Feed.fetch_and_parse(url)
-    @new_feed = Feedjira::Feed.create(title: feed.title, url: feed.url)
+    @new_feed = Feed.create(title: feed.title, url: feed.url)
     puts @new_feed.inspect  
 
 
@@ -15,7 +15,7 @@ class HomeController < ApplicationController
   def gotham
     url = "http://showrss.info/feeds/928.rss"
     feed =  Feedjira::Feed.fetch_and_parse(url)
-    @new_feed = Feedjira::Feed.create(title: feed.title, url: feed.url)
+    @new_feed = Feed.create(title: feed.title, url: feed.url)
     puts @new_feed.inspect  
 
 
