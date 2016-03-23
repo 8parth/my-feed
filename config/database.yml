@@ -9,6 +9,10 @@ default: &default
   database: feeds_database
   pool: 5
   timeout: 5000
+  host: localhost
+  username: postgres
+  password: postgres
+  
 
 development:
   <<: *default
