@@ -36,4 +36,5 @@ class HomeController < ApplicationController
     @entries = feed.entries
 
     puts @entries.inspect
+  end
 end
