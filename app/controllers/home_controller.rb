@@ -24,4 +24,16 @@ class HomeController < ApplicationController
     puts @entries.inspect
 
   end
+
+  def got
+    url = 'http://showrss.info/feeds/350.rss'
+
+    feed =  Feedjira::Feed.fetch_and_parse(url)
+    @new_feed = Feed.create(title: feed.title, url: feed.url)
+    puts @new_feed.inspect  
+
+
+    @entries = feed.entries
+
+    puts @entries.inspect
 end
