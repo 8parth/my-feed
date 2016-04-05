@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index'
-
+  get 'home/user_feed'
   get 'home/gotham'
   get 'home/got'
   root 'home#index'

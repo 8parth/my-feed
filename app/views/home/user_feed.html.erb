@@ -1,0 +1,27 @@
+
+<h1>
+<%= @new_feed.title %>
+</h1>
+<%= link_to 'Gotham feed', home_gotham_url %>
+<%= link_to 'Arrow feed', home_index_url %>
+<%= link_to 'Game of thrones feed', home_got_url %>
+
+
+<p> Here are the entries</p>
+
+<% @entries.each do |entry| %>
+	Episode name: 
+	<%=entry.title%>
+	<br>
+	Episode link:
+	<%= link_to 'download link', entry.url %> 
+	<br>
+	Published at:
+	<%= entry.published %>
+	<br>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+<% end %>

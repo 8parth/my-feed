@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
-
-
+gem 'mechanize'
+gem 'pismo'
+gem 'httparty'
 gem 'thin'
 gem 'pg'
 gem 'feedjira'
