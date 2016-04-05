@@ -18,26 +18,26 @@ class HomeController < ApplicationController
   def get_feed(name)
     
     agent  = Mechanize.new
-    
+    #feed_link = Mechanize::Page::Link.new
     page = agent.get("http://showrss.info/?cs=feeds")
     form = page.forms[0]
     form.fields[1].options.each do |option|
       if option.text == name
         form.fields[1].value = option.value
+      end
     end
 
     returned_page = form.submit
     links = returned_page.links
     links.each do |link|
-      link.contains
+      temp_link = link
+      if temp_link.to_s.include?(".rss")
+        return link.url
+      end
     end
     #form.fields[1].options.fourth.text
-    link = page.link_with(:text => name)
-    if !link.nil?      
-      return link + ".rss"
-    else
-      return nil
-    end
+    
+    
   end
 
   #get 'home/user_feed'
