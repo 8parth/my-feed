@@ -32,7 +32,7 @@ class HomeController < ApplicationController
     links.each do |link|
       temp_link = link
       if temp_link.to_s.include?(".rss")
-        return link.url
+        return link.uri
       end
     end
     #form.fields[1].options.fourth.text
@@ -45,7 +45,7 @@ class HomeController < ApplicationController
 
     url = get_feed(params[:feed_name])
     if !url.nil?
-
+      puts url
       feed =  Feedjira::Feed.fetch_and_parse(url)
       @new_feed = Feed.create(title: feed.title, url: feed.url)
       puts @new_feed.inspect  
@@ -55,7 +55,7 @@ class HomeController < ApplicationController
 
       puts @entries.inspect
     else
-      exit
+      render 'Home#index'
     end
   end
 
