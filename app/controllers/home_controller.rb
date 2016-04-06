@@ -29,34 +29,37 @@ class HomeController < ApplicationController
 
     returned_page = form.submit
     links = returned_page.links
+
     links.each do |link|
       temp_link = link
+      
       if temp_link.to_s.include?(".rss")
+         
         return link.uri
       end
     end
-    #form.fields[1].options.fourth.text
-    
+    #form.fields[1].options.fourth.text 
     
   end
 
   #get 'home/user_feed'
   def user_feed
-
-    url = get_feed(params[:feed_name])
-    if !url.nil?
-      puts url
+    url = nil
+    if params[:feed_name].present?
+      url = get_feed(params[:feed_name])
+    else
+      url = "http://showrss.info/feeds/505.rss"
+    end
+    
       feed =  Feedjira::Feed.fetch_and_parse(url)
       @new_feed = Feed.create(title: feed.title, url: feed.url)
-      puts @new_feed.inspect  
+        
 
 
       @entries = feed.entries
 
-      puts @entries.inspect
-    else
-      render 'Home#index'
-    end
+    
+    
   end
 
   def gotham
