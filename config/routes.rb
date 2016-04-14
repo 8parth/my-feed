@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
   get 'home/index'
   get 'home/user_feed'
   get 'home/gotham'

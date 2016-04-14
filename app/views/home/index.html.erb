@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+
 <div id="page">
 	<div id="page-bgtop">
 		<div id="page-bgbtm">
@@ -17,10 +19,21 @@
 				</div>
 				
 			</div>
-			
+<% else %>
+<div id="page">
+	<div id="page-bgtop">
+		<div id="page-bgbtm">
+			<div id="content">
+				<h2 class="title">You need to sign in before continuing</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>			
 	    <%= render 'layouts/sidebar' %>
 
 			<!-- end #content -->
+
 
 
 <!-- <h1>
