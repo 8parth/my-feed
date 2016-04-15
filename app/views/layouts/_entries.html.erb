@@ -13,7 +13,7 @@
 					<div class="entry">
 						<%= form_tag({controller: "home", action: "user_feed"}, method: "get", remote: true) do  %>
 							<p>Select show: <%#= select_tag "shows", options_from_collection_for_select(@shows, "value","name") %>
-							<%= select_tag "shows", options_from_collection_for_select(@shows, "value","name"), {include_blank: false}%>
+							<%= select_tag "shows", options_from_collection_for_select(@shows, "value","name"), {include_blank: true}%>
 							<%#= select "shows", Show.all.collect {|p| [ p.name, p.value ] }, { include_blank: true }%>
 							</p>
 							
@@ -22,7 +22,6 @@
 							</p>
 						<% end %>
 					</div>
-
 
 					<% @entries.each do |entry| %>
 						<div class="entry">
@@ -48,6 +47,3 @@
 <% end %>			
 
 	    <%= render 'layouts/sidebar' %>
-
-			<!-- end #content -->
-

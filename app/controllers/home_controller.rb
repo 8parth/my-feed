@@ -10,10 +10,11 @@ class HomeController < ApplicationController
     #url2 = "http://showrss.info/feeds/928.rss"
     feed =  Feedjira::Feed.fetch_and_parse(url)
     @new_feed = Feed.create(title: feed.title, url: feed.url)
-    
+      
 
 
     @entries = feed.entries  
+    @shows = Show.all
     rescue Exception => e
       puts e
     end
@@ -51,8 +52,14 @@ class HomeController < ApplicationController
   #get 'home/user_feed'
   def user_feed
     url = nil
+        
+    show_feed = params[:shows] if params[:shows].present?
+    
+    
     if params[:feed_name].present?
       url = get_feed(params[:feed_name])
+    elsif !show_feed.nil?
+      url = "http://showrss.info/feeds/#{show_feed}.rss"
     else
       url = "http://showrss.info/feeds/505.rss"
     end
@@ -64,6 +71,11 @@ class HomeController < ApplicationController
 
       @entries = feed.entries
 
+      respond_to do |format|
+        format.html 
+        format.json { head :no_content }
+        format.js   { render :layout => false }
+      end
     
     
   end

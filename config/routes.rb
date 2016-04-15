@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  root 'home#user_feed'
   devise_for :users
   resources :users
   get 'home/index'
   get 'home/user_feed'
   get 'home/gotham'
   get 'home/got'
-  root 'home#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

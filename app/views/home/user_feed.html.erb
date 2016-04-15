@@ -3,7 +3,19 @@
 		<div id="page-bgbtm">
 			<div id="content">
 				<div class="post">
-					
+					<div class="entry">
+						<%= form_tag("/home/user_feed", method: "get") do  %>
+							<p>Select show: <%#= select_tag "shows", options_from_collection_for_select(@shows, "value","name") %>
+							<%= select_tag "shows", options_from_collection_for_select(Show.all, "value","name"), {include_blank: false}%>
+							<%#= select "shows", Show.all.collect {|p| [ p.name, p.value ] }, { include_blank: true }%>
+							</p>
+							
+							<p>
+								<%= submit_tag "select", class: "btn btn-primary"%>
+							</p>
+						<% end %>
+					</div>
+
 					<h2 class="title"><%= @new_feed.title %></h2>
 					<p class="meta">Here are the entries</p>
 					<% @entries.each do |entry| %>
