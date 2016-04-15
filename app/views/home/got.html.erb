@@ -1,4 +1,27 @@
+<div id="page">
+	<div id="page-bgtop">
+		<div id="page-bgbtm">
+			<div id="content">
+				<div class="post">
+					
+					<h2 class="title"><%= @new_feed.title %></h2>
+					<p class="meta">Here are the entries</p>
+					<% @entries.each do |entry| %>
+						<div class="entry">
+							<p>Episode name: <%=entry.title%></p>
+							<p>Episode link: <%= link_to 'download link', entry.url %></p>
+							<p>Published at: <%= entry.published %></p>
+						</div>
+					<% end %>
 
+				</div>
+				
+			</div>
+
+			
+<%= render 'layouts/sidebar' %>
+
+<!-- 
 <h1>
 <%= @new_feed.title %>
 </h1>
@@ -24,4 +47,4 @@
 	<br>
 	<br>
 	<br>
-<% end %>
+<% end %> -->

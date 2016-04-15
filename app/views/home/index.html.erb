@@ -1,14 +1,51 @@
+<% if user_signed_in? %>
 
-<h1>
+<div id="page">
+	<div id="page-bgtop">
+		<div id="page-bgbtm">
+			<div id="content">
+				<div class="post">
+					
+					<h2 class="title"><%= @new_feed.title %></h2>
+					<p class="meta">Here are the entries</p>
+					<% @entries.each do |entry| %>
+						<div class="entry">
+							<p>Episode name: <%=entry.title%></p>
+							<p>Episode link: <%= link_to 'download link', entry.url %></p>
+							<p>Published at: <%= entry.published %></p>
+						</div>
+					<% end %>
+
+				</div>
+				
+			</div>
+<% else %>
+<div id="page">
+	<div id="page-bgtop">
+		<div id="page-bgbtm">
+			<div id="content">
+				<h2 class="title">You need to sign in before continuing</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>			
+	    <%= render 'layouts/sidebar' %>
+
+			<!-- end #content -->
+
+
+
+<!-- <h1>
 <%= @new_feed.title %>
-</h1>
-<%= link_to 'Gotham feed', home_gotham_url %>
+</h1> -->
+<!--<%= link_to 'Gotham feed', home_gotham_url %>
 <%= link_to 'Game of Thrones feed', home_got_url %>
+-->
 
 
-
-<p> Here are the entries</p>
-
+<!-- <p> Here are the entries</p> -->
+<!-- 
 <% @entries.each do |entry| %>
 	Episode name: 
 	<%=entry.title%>
@@ -25,3 +62,4 @@
 	<br>
 	<br>
 <% end %>
+ -->

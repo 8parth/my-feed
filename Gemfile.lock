@@ -38,6 +38,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     awesome_print (1.6.1)
+    bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -54,6 +55,13 @@ GEM
     crass (1.0.2)
     daemons (1.2.3)
     debug_inspector (0.0.2)
+    devise (3.5.6)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     domain_name (0.5.20160310)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
@@ -111,6 +119,7 @@ GEM
     nokogumbo (1.4.7)
       nokogiri
     ntlm-http (0.1.1)
+    orm_adapter (0.5.0)
     pg (0.18.2)
     pismo (0.7.4)
       awesome_print
@@ -153,6 +162,8 @@ GEM
     rake (10.5.0)
     rdoc (4.2.2)
       json (~> 1.4)
+    responders (2.1.2)
+      railties (>= 4.2.0, < 5.1)
     sanitize (4.0.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
@@ -193,6 +204,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
+    warden (1.2.6)
+      rack (>= 1.0)
     web-console (2.3.0)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -206,6 +219,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
+  devise
   feedjira
   httparty
   jbuilder (~> 2.0)
@@ -224,4 +238,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'devise'
 gem 'mechanize'
 gem 'pismo'
 gem 'httparty'
