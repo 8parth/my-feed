@@ -3,7 +3,11 @@
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
-</p>
 
+</p>
+<p>
+<strong>Profile pic:</strong></br>
+  <%= image_tag @user.profile_pic.url(:medium) %>
+</p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
