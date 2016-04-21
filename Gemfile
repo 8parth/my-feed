@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+gem "paperclip"
+gem 'omniauth-facebook'
 gem 'devise'
 gem 'mechanize'
 gem 'pismo'
