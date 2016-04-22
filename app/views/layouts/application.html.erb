@@ -10,15 +10,13 @@
 <body>
 
 <%= render 'layouts/header' %>
-<div id="content">
-				<!-- <div class="post"> -->
-					<div class="entry">
-						<p class="notice"><%= notice %></p>
-						<p class="alert"><%= alert %></p>
-					</div>
-				<!-- </div> -->
-				</div>
-
+			
+<div id="footer-bgcontent">
+	<div id="footer">
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+	</div>
+</div>
 <%= yield %>
 
 <%= render 'layouts/footer' %>
