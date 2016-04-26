@@ -1,5 +1,6 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
+
 Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
@@ -242,6 +243,13 @@ Devise.setup do |config|
   config.omniauth :facebook, '1554437294868244', 'cbf0ce223e27b64cf3d9dacb383843ef',
           image_size: { width: 500, height: 500 },
                            secure_image_url: true
+
+  require 'omniauth-google-oauth2'
+  #config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
+  config.omniauth :google_oauth2, 
+    '427985975625-2e41196cum6jk1423gffba7t0ao10gqi.apps.googleusercontent.com', 
+    '1tUyI-BE_ZVWGfYXBfiM1wsB', 
+    { access_type: "offline", approval_prompt: "" }
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
