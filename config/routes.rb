@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   root 'home#user_feed'
+  get 'application/facebook_logout', :as => :facebook_logout
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   devise_scope :user do
     get 'sign_in', :to => 'devise/sessions#new'
-    delete 'sign_out', :to => 'devise/sessions#destroy'
+    delete 'sign_out', :to => 'devise/sessions#destroy', :as => :omniauth_destroy_user_session
+
   end
   resources :users
   get 'home/index'
