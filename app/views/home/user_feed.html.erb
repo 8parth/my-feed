@@ -16,16 +16,18 @@
 						<% end %>
 					</div>
 
-					<h2 class="title"><%= @new_feed.title %></h2>
-					<p class="meta">Here are the entries</p>
-					<% @entries.each do |entry| %>
-						<div class="entry">
-							<p>Episode name: <%=entry.title%></p>
-							<p>Episode link: <%= link_to 'download link', entry.url %></p>
-							<p>Published at: <%= entry.published %></p>
-						</div>
-					<% end %>
+					<% if !@feed.nil?   %>
+						<h2 class="title"><%= @new_feed.title %></h2>
+						<p class="meta">Here are the entries</p>
+						<% @entries.each do |entry| %>
+							<div class="entry">
+								<p>Episode name: <%=entry.title%></p>
+								<p>Episode link: <%= link_to 'download link', entry.url %></p>
+								<p>Published at: <%= entry.published %></p>
+							</div>
+						<% end %>
 
+					<% end %>	
 				</div>
 				
 			</div>
@@ -33,31 +35,31 @@
 	    <%= render 'layouts/sidebar' %>
 
 			<!-- end #content -->
-<!-- 
+<!--  
 <h1>
-<%= @new_feed.title %>
+<%#= @new_feed.title %>
 </h1>
-<%= link_to 'Gotham feed', home_gotham_url %>
-<%= link_to 'Arrow feed', home_index_url %>
-<%= link_to 'Game of thrones feed', home_got_url %>
+<%#= link_to 'Gotham feed', home_gotham_url %>
+<%#= link_to 'Arrow feed', home_index_url %>
+<%#= link_to 'Game of thrones feed', home_got_url %>
 
 
 <p> Here are the entries</p>
 
-<% @entries.each do |entry| %>
+<%# @entries.each do |entry| %>
 	Episode name: 
-	<%=entry.title%>
+	<%#=entry.title%>
 	<br>
 	Episode link:
-	<%= link_to 'download link', entry.url %> 
+	<%#= link_to 'download link', entry.url %> 
 	<br>
 	Published at:
-	<%= entry.published %>
+	<%#= entry.published %>
 	<br>
 	
 	<br>
 	<br>
 	<br>
 	<br>
-<% end %>
- -->
+<%# end %>
+  -->
