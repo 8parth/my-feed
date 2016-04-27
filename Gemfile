@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem "paperclip"
+gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'devise'

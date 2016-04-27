@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     split_token = omniauth["credentials"]["token"].split("|")
     fb_api_key = split_token[0]
     fb_session_key = split_token[1]
-    redirect_to "http://www.facebook.com/logout.php?next=#{omniauth_destroy_user_session_url}&access_token=#{omniauth["credentials"]["token"]}&confirm=1";
+    redirect_to "http://www.facebook.com/logout.php?next=#{omniauth_destroy_user_session_url}&access_token=#{omniauth["credentials"]["token"]}&confirm=1"; 
   
     #omniauth = request.env["omniauth.auth"]
     #omniauth =  Devise.omniauth_configs[:facebook].args[0]

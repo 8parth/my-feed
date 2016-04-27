@@ -13,12 +13,12 @@
 			<li><a href="#">Contact</a></li>
 			<% if user_signed_in? %>
 			<li>
-				<% if current_user.provider.nil? %>
-					<%= link_to 'Log out', destroy_user_session_url, method: :delete %>
-				<% else %>
-					
-				<%#= link_to 'Log out', destroy_user_session_url, method: :delete %>
+				<% if current_user.provider == 'facebook' %>
 					<%= link_to 'Log out', facebook_logout_url, method: :get %>
+				<% else %>
+					<%= link_to 'Log out', destroy_user_session_url, method: :delete %>
+				<%#= link_to 'Log out', destroy_user_session_url, method: :delete %>
+					
 				<% end %>	
 			</li>
 			<% end %>
