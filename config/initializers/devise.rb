@@ -243,8 +243,8 @@ Devise.setup do |config|
   config.omniauth :facebook, '1554437294868244', 'cbf0ce223e27b64cf3d9dacb383843ef',
           image_size: { width: 500, height: 500 },
                            secure_image_url: true
-
-  callback_url  = 'http://localhost:3000/'
+  full_host = Rails.env.production? ? 'https://feedsbypm.herokuapp.com' : 'http://localhost:3000'
+  callback_url  = full_host + '/'
   
   require 'omniauth-google-oauth2'
   #config.omniauth :google_oauth2, ENV["GOOGLE_KEY"], ENV["GOOGLE_SECRET"]
