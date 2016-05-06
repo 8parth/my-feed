@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
     #session[:fb_token] = omniauth["credentials"]["token"] if omniauth['provider'] == 'facebook'
 
     omniauth = session[:omniauth]
-    
-
+    puts "zxc"
+    puts omniauth
     access_token = omniauth["credentials"]["token"]
     split_token = omniauth["credentials"]["token"].split("|")
     fb_api_key = split_token[0]
