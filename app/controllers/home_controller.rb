@@ -58,12 +58,12 @@ class HomeController < ApplicationController
     
     if params[:feed_name].present?
       url = get_feed(params[:feed_name])
-      
+
     elsif !show_feed.nil?
       url = "http://showrss.info/feeds/#{show_feed}.rss"
-      feed =  Feedjira::Feed.fetch_and_parse(url)
+      @feed =  Feedjira::Feed.fetch_and_parse(url)
       #@new_feed = Feed.create(title: @feed.title, url: @feed.url)
-      @new_feed = feed
+      @new_feed = @feed
 
       @entries = @feed.entries
     else
