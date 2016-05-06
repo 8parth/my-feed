@@ -9,7 +9,7 @@ class HomeController < ApplicationController
       url = "http://showrss.info/feeds/505.rss"
     #url2 = "http://showrss.info/feeds/928.rss"
     feed =  Feedjira::Feed.fetch_and_parse(url)
-    @new_feed = Feed.create(title: feed.title, url: feed.url)
+    #@new_feed = Feed.create(title: feed.title, url: feed.url)
       
 
 
@@ -61,12 +61,12 @@ class HomeController < ApplicationController
     elsif !show_feed.nil?
       url = "http://showrss.info/feeds/#{show_feed}.rss"
       @feed =  Feedjira::Feed.fetch_and_parse(url)
-      @new_feed = Feed.create(title: @feed.title, url: @feed.url)
+      #@new_feed = Feed.create(title: @feed.title, url: @feed.url)
       @entries = @feed.entries
     else
       #url = "http://showrss.info/feeds/505.rss"
       feed = nil
-      @new_feed = nil
+      #@new_feed = nil
       @entries = nil
     end
     
@@ -84,8 +84,8 @@ class HomeController < ApplicationController
   def gotham
     url = "http://showrss.info/feeds/928.rss"
     feed =  Feedjira::Feed.fetch_and_parse(url)
-    @new_feed = Feed.create(title: feed.title, url: feed.url)
-    puts @new_feed.inspect  
+    #@new_feed = Feed.create(title: feed.title, url: feed.url)
+    #puts @new_feed.inspect  
 
 
     @entries = feed.entries
@@ -98,8 +98,8 @@ class HomeController < ApplicationController
     url = 'http://showrss.info/feeds/350.rss'
 
     feed =  Feedjira::Feed.fetch_and_parse(url)
-    @new_feed = Feed.create(title: feed.title, url: feed.url)
-    puts @new_feed.inspect  
+    #@new_feed = Feed.create(title: feed.title, url: feed.url)
+    #puts @new_feed.inspect  
 
 
     @entries = feed.entries

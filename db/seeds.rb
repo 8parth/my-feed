@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Show.delete_all
 agent = Mechanize.new
 page = agent.get("http://showrss.info/?cs=feeds")
 form = page.forms[0]
