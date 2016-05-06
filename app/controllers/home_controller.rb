@@ -11,7 +11,7 @@ class HomeController < ApplicationController
     feed =  Feedjira::Feed.fetch_and_parse(url)
     #@new_feed = Feed.create(title: feed.title, url: feed.url)
       
-
+    @new_feed = feed
 
     @entries = feed.entries  
     @shows = Show.all
@@ -58,15 +58,18 @@ class HomeController < ApplicationController
     
     if params[:feed_name].present?
       url = get_feed(params[:feed_name])
+      
     elsif !show_feed.nil?
       url = "http://showrss.info/feeds/#{show_feed}.rss"
-      @feed =  Feedjira::Feed.fetch_and_parse(url)
+      feed =  Feedjira::Feed.fetch_and_parse(url)
       #@new_feed = Feed.create(title: @feed.title, url: @feed.url)
+      @new_feed = feed
+
       @entries = @feed.entries
     else
       #url = "http://showrss.info/feeds/505.rss"
       feed = nil
-      #@new_feed = nil
+      @new_feed = nil
       @entries = nil
     end
     
@@ -86,7 +89,7 @@ class HomeController < ApplicationController
     feed =  Feedjira::Feed.fetch_and_parse(url)
     #@new_feed = Feed.create(title: feed.title, url: feed.url)
     #puts @new_feed.inspect  
-
+    @new_feed = feed
 
     @entries = feed.entries
 
@@ -101,7 +104,7 @@ class HomeController < ApplicationController
     #@new_feed = Feed.create(title: feed.title, url: feed.url)
     #puts @new_feed.inspect  
 
-
+    @new_feed = feed
     @entries = feed.entries
 
     puts @entries.inspect

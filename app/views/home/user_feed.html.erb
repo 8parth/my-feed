@@ -17,6 +17,8 @@
 					</div>
 
 					<% if !@feed.nil?   %>
+					<% puts @feed.inspect %>
+					<% exit %>
 						<h2 class="title"><%= @new_feed.title %></h2>
 						<p class="meta">Here are the entries</p>
 						<% @entries.each do |entry| %>
