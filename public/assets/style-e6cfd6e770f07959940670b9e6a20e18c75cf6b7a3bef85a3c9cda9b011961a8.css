@@ -9,7 +9,7 @@ Released for free under the Creative Commons Attribution License
 body {
 	margin: 0px;
 	padding: 0;
-	background: #101010 url(assets/images/img06.jpg) no-repeat left bottom;
+	background: #101010 url('img06.jpg') no-repeat left bottom;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #72809F;
@@ -120,7 +120,7 @@ hr {
 #menu li {
 	display: block;
 	float: left;
-	background: url(assets/images/img05.jpg) no-repeat right top;
+	background: url('img05.jpg') no-repeat right top;
 }
 
 #menu a {
@@ -381,7 +381,7 @@ hr {
 	height: 37px;
 	margin: 0px;
 	padding: 15px 0px 0px 20px;
-	background: url(assets/images/img02.jpg) no-repeat left top;
+	background: url('img02.jpg') no-repeat left top;
 	text-transform: uppercase;
 	font-size: 18px;
 	font-weight: bold;
@@ -466,7 +466,7 @@ hr {
 
 #footer-bgcontent {
 	height: 110px;
-	background: url(assets/images/img02.gif) repeat-x left top;
+	background: url('img02.gif') repeat-x left top;
 }
 
 #footer p {
@@ -481,27 +481,69 @@ hr {
 }
 
 #bg1 {
-	background: url(assets/images/img03.jpg) repeat-y left top;
+	background: url('img03.jpg') repeat-y left top;
 }
 
 #bg2 {
 	margin-bottom: 10px;
 	padding: 10px 0px 10px 0px;
-	background: url(assets/images/img04.jpg) no-repeat left bottom;
+	background: url('img04.jpg') no-repeat left bottom;
 }
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
+
+/*custom*/
+.para {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.header2 {
+	font-weight: bold;
+}
 
 
- */
+/*social sharing*/
+ /* Social icons for Blogger
+----------------------------------------------- */
 
+#social-icons {
+margin-bottom:-30px;
+height:50px;
+width:100%;
+clear:both;
+z-index: 2;
+position: relative;
+}
+.social-media-icons {
+display:table
+}
+.social-media-icons ul {
+text-align:right;
+padding:5px 5px 0 0
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+.social-media-icons ul {
+margin-bottom:0;
+padding:0;
+float:right;
+}
+.social-media-icons li.media_icon {
+margin-left:6px;
+padding-left:0 !important;
+background:none !important;
+display:inline;
+float:left;
+}
+.social-media-icons li:hover {
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(-360deg);
+-moz-transition: all 0.5s ease-in-out;
+-webkit-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
