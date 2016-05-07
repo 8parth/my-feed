@@ -4,6 +4,10 @@ class HomeController < ApplicationController
 
   before_action :authenticate_user!
 
+  def contact
+    
+  end
+
   def index
     begin
       url = "http://showrss.info/feeds/505.rss"

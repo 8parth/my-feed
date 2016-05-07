@@ -488,3 +488,61 @@ hr {
 	padding: 10px 0px 10px 0px;
 	background: url('img04.jpg') no-repeat left bottom;
 }
+
+/*custom*/
+.para {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.header2 {
+	font-weight: bold;
+}
+
+
+/*social sharing*/
+ /* Social icons for Blogger
+----------------------------------------------- */
+
+#social-icons {
+margin-bottom:-30px;
+height:50px;
+width:100%;
+clear:both;
+z-index: 2;
+position: relative;
+}
+.social-media-icons {
+display:table
+}
+.social-media-icons ul {
+text-align:right;
+padding:5px 5px 0 0
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+.social-media-icons ul {
+margin-bottom:0;
+padding:0;
+float:right;
+}
+.social-media-icons li.media_icon {
+margin-left:6px;
+padding-left:0 !important;
+background:none !important;
+display:inline;
+float:left;
+}
+.social-media-icons li:hover {
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+transform: rotate(-360deg);
+-moz-transition: all 0.5s ease-in-out;
+-webkit-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}

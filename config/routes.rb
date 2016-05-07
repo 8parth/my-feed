@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'home/user_feed'
   get 'home/gotham'
   get 'home/got'
-
+  get 'home/contact'
 
   
   # The priority is based upon order of creation: first created -> highest priority.
