@@ -1,28 +1,3 @@
-== README
+This application crawls data from http://showrss.info to get xml feed of clicked TV show with mechanize gem, and parses the xml feed with feedjira gem to show the details of show and torrent download links of latest released episodes. Feeds get updated by showrss and hence user can get torrent download link of latest episodes.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+For user authentication and identity management devise gem is used. Also users can login with facebook and google+ by omniauth strategies. Soon more features will be added such as favourite TV shows of users, ratings, etc.
