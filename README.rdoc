@@ -4,7 +4,7 @@ For user authentication and identity management devise gem is used. Also users c
 
 Here are few screenshots of application
 
-![alt tag](https://drive.google.com/open?id=0B5TRbT-hCQFoeXFYZy02YmlXNVU "Screenshot 1")
+![alt tag](https://www.dropbox.com/s/fqwcws0d0vap8v0/Screenshot%20from%202016-06-06%2014%3A59%3A42.png?dl=0 "Screenshot 1")
 
 ![alt tag](https://drive.google.com/open?id=0B5TRbT-hCQFoUnRhMWdMMm1tUDQ "Screenshot 2")
 
