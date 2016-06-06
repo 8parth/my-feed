@@ -1,3 +1,11 @@
 This application crawls data from http://showrss.info to get xml feed of clicked TV show with mechanize gem, and parses the xml feed with feedjira gem to show the details of show and torrent download links of latest released episodes. Feeds get updated by showrss and hence user can get torrent download link of latest episodes.
 
 For user authentication and identity management devise gem is used. Also users can login with facebook and google+ by omniauth strategies. Soon more features will be added such as favourite TV shows of users, ratings, etc.
+
+Here are few screenshots of application
+
+![alt tag](https://drive.google.com/open?id=0B5TRbT-hCQFoeXFYZy02YmlXNVU "Screenshot 1")
+
+![alt tag](https://drive.google.com/open?id=0B5TRbT-hCQFoUnRhMWdMMm1tUDQ "Screenshot 2")
+
+![alt tag](https://drive.google.com/open?id=0B5TRbT-hCQFoU2dIRXp2U3JnN2c "Screenshot 3")
