@@ -4,8 +4,6 @@ For user authentication and identity management devise gem is used. Also users c
 
 Here are few screenshots of application
 
-![alt tag](https://cloud.githubusercontent.com/assets/10467245/15818305/4fafade0-2bfa-11e6-9717-140f4ec94f36.png)
-
-![alt tag](https://cloud.githubusercontent.com/assets/10467245/15818306/4fb450ca-2bfa-11e6-94c8-5870175bf77d.png "Screenshot 2")
-
-![alt tag](https://cloud.githubusercontent.com/assets/10467245/15818307/4fc32a28-2bfa-11e6-9e8a-bfcd7061abc2.png "Screenshot 3")
+![screenshot from 2016-06-06 14 59 17](https://cloud.githubusercontent.com/assets/10467245/15818305/4fafade0-2bfa-11e6-9717-140f4ec94f36.png)
+![screenshot from 2016-06-06 14 59 42](https://cloud.githubusercontent.com/assets/10467245/15818306/4fb450ca-2bfa-11e6-94c8-5870175bf77d.png)
+![screenshot from 2016-06-06 15 00 05](https://cloud.githubusercontent.com/assets/10467245/15818307/4fc32a28-2bfa-11e6-9e8a-bfcd7061abc2.png)
